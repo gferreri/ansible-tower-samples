@@ -4,4 +4,7 @@
     - name: Hello Message
       debug:
         msg: "Hello World!"
+    - name: Fail
+      fail:
+        msg: This failed!
 
