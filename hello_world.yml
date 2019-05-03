@@ -3,7 +3,7 @@
   tasks:
     - name: Hello Message
       debug:
-        msg: "Hello World!"
+        msg: "Hello {{name}}!"
     - name: Fail
       fail:
         msg: This failed!
