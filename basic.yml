@@ -1,9 +1,8 @@
-- name: Hello World Sample
+- name: Deploy demo app
   hosts: all
   tasks:
-    - name: Hello Message
+    - name: Begin Message
       debug:
-        msg: "Hello {{name}}!"
-    - name: Fail
-      debug:
-        msg: Task Succeeded!
+        msg: "Beginning deployment of version {{version}} to {{environment}}..."
+    - name: Deploy
+      shell:  curl https://jsonplaceholder.typicode.com/comments
