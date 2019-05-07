@@ -6,3 +6,5 @@
         msg: "Beginning deployment of version {{version}} to {{environment}}..."
     - name: Deploy
       shell:  curl https://jsonplaceholder.typicode.com/comments
+      register: output
+    - debug: msg="{{ output.stdout }}"
