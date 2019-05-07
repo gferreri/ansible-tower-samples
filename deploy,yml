@@ -1,0 +1,8 @@
+- name: Deploy demo app
+  hosts: all
+  tasks:
+    - name: Begin Message
+      debug:
+        msg: "Beginning deployment of version {{version}} to {{environment}}..."
+    - name: Deploy
+      shell:  curl https://jsonplaceholder.typicode.com/comments
